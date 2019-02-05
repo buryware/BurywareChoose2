@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Choose 2</string>
+    <string name="large_text">
+        "Choose© 2.0 by Buryware 2014-19.\n"
+        "\nWritten by Steve Stansbury"
+        "\n\nPick the blue buttons..."
+        "\nSee how far you can CHOOSE!"
+        "\nGreen is a win, red is a lose.\nGet ALL the green, and YOU will advance!"
+        "\n\nHit the RESET button restart a game\nfrom your current level."
+        "\nTo completely start over, use \nStart Over from the menu,\nor rotate your phone.\n\nEnjoy!"
+    </string>
+    <string name="action_settings">Start Over</string>
+    <string name="action_win">YOU WIN!</string>
+    <string name="action_lose">Please try again...</string>
+    <string name="action_start">Start a new game...</string>
+    <string name="action_play">Pick a blue tile...</string>
+</resources>
