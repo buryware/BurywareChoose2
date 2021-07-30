@@ -1,28 +1,17 @@
 package com.buryware.burywarechoose;
 
-import android.content.pm.ResolveInfo;
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
-import android.content.Context;
-import android.content.Intent;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
+import android.view.View;
 
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.gms.appinvite.AppInviteInvitation;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 /*
  *
@@ -35,21 +24,36 @@ public class ChooseActivity extends AppCompatActivity {
     int nLevel = 1;         // game level
     int nCells = 2;         // number of dots
 
+    private boolean mNightMode = true;
+    Intent intent = null;
+
+   /* public static FirebaseAuth mFirebaseAuth;
+    public static FirebaseUser mFirebaseUser;
+    public static DatabaseReference mFirebaseDatabaseReference;
+    public static FirebaseAnalytics mFirebaseAnalytics;*/
+
+    public static final String TAG = "ChooseActivity";
+    public static final String MESSAGES_CHILD = "messages";
+    public static final String MESSAGE_SENT_EVENT = "message_sent";
+    public static final String MESSAGE_URL = "http://friendlychat.firebase.google.com/message/";
+    public static final String ANONYMOUS = "anonymous";
+    public static final int REQUEST_INVITE = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_choose);
+        intent= new Intent();
 
-        //   startNewGame();
         try {
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
+            Toolbar toolbar = findViewById(R.id.toolbar);
 
             setSupportActionBar(toolbar);
 
-            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+            FloatingActionButton fab = findViewById(R.id.fab);
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -78,21 +82,82 @@ public class ChooseActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-
+        if (id == R.id.action_startover) {
             startNewGame();
             setContentView(R.layout.gamegridview);
 
             return true;
         }
+
+        if (id == R.id.action_donate) {
+            Intent intent = new Intent(this, DonationsActivity.class);
+            startActivity(intent);
+
+            return true;
+        }
+
+        if (id == R.id.action_invite) {
+            sendInvitation();
+
+            return true;
+        }
+
+        if (id == R.id.action_nightmode) {
+            mNightMode = !mNightMode;
+            if (mNightMode) {
+                item.setTitle(R.string.night_mode_on);
+            } else{
+                item.setTitle(R.string.night_mode_off);
+            }
+            return true;
+        }
+
+        if (id == R.id.action_HSmode) {
+            Intent intent = new Intent(this, HighAwardsScores.class);
+            intent.putExtra("night_mode", mNightMode);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_Highestmode) {
+            Intent intent = new Intent(this, HighestAwardsScores.class);
+            intent.putExtra("night_mode", mNightMode);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_Thanksmode) {
+            Intent intent = new Intent(this, ChooseThanksFirstUsers.class);
+            intent.putExtra("night_mode", mNightMode);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_about) {
+            Intent intent = new Intent(this, ChooseAboutActivity.class);
+            intent.putExtra("night_mode", mNightMode);
+            startActivity(intent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    private void sendInvitation() {
+        Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
+                .setMessage(getString(R.string.invitation_message))
+                .setCallToActionText(getString(R.string.invitation_cta))
+                .build();
+        startActivityForResult(intent, REQUEST_INVITE);
     }
 
     public void startNewGame() {
 
-        Intent intent = new Intent(this, ChooserGameActivity.class);
+        intent = new Intent(this, ChooserGameActivity.class);
+        intent.putExtra("night_mode", mNightMode);
         startActivity(intent);
     }
+
     public int getCells() {
 
         return nLevel * nLevel;

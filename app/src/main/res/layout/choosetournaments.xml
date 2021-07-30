@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/titleview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:paddingTop="3dp"
+                app:srcCompat="@drawable/tournament" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="195dp"
+                android:layout_height="400dp"
+                android:background="@color/colorCreame"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/playerlabelText"
+                    android:layout_width="74dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/players"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textColor="@color/colorBuryware" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/PlayersRecyclerView"
+                    android:layout_width="195dp"
+                    android:layout_height="285dp"
+                    android:layout_weight="0.4"
+                    android:paddingHorizontal="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="400dp"
+                android:layout_weight="0.4"
+                android:background="@color/colorLime"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/winnerslabelText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/winners"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textColor="@color/colorBuryware" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/WinnersRecyclerView"
+                    android:layout_width="210dp"
+                    android:layout_height="68dp"
+                    android:layout_weight="0.2"
+                    android:paddingHorizontal="15dp" />
+
+                <CalendarView
+                    android:id="@+id/calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_weight="0.2"
+                    android:background="@color/colorDKCreame"
+                    android:textColor="@color/colorBuryware"
+                    android:visibility="visible">
+                </CalendarView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/payoutspichart"
+                android:layout_width="match_parent"
+                android:layout_height="182dp"
+                android:layout_weight="0.3"
+                app:srcCompat="@drawable/piechart" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/payoutpot"
+                android:layout_width="15dp"
+                android:layout_height="55dp"
+                android:layout_weight="0.1"
+                app:srcCompat="@drawable/medpotofgold" />
+
+            <TextView
+                android:id="@+id/pottotalstatuslabel"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:background="@color/colorPrimary"
+                android:text="@string/pot_total"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/pottotalstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center|start"
+                android:layout_weight="0.1"
+                android:background="@color/colorPrimary"
+                android:text="@string/zero_dollar"
+                android:textAlignment="textStart"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/joinbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/button_frame"
+                android:textColor="@android:color/white"
+                android:text="@string/JOIN" />
+
+            <Button
+                android:id="@+id/updatebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/button_frame"
+                android:textColor="@android:color/white"
+                android:text="@string/UPDATE" />
+
+            <Button
+                android:id="@+id/cancelbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/button_frame"
+                android:textColor="@android:color/white"
+                android:text="@string/CANCEL" />
+
+            <Button
+                android:id="@+id/hintsbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/button_frame"
+                android:textColor="@android:color/white"
+                android:layout_weight="0.3"
+                android:text="@string/HINTS" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/BurywareImageView"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="0.9"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/buryware" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

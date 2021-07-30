@@ -1,5 +1,6 @@
 package com.buryware.burywarechoose;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,16 +40,14 @@ public class ChooseAdapter extends BaseAdapter {
             gridView = new View(context);
             gridView = inflater.inflate(R.layout.gamegridview, null);
 
-            TextView textView = (TextView) gridView.findViewById(R.id.statusline);
+            TextView textView = gridView.findViewById(R.id.statusline);
 
-        /*    textView.setText(countries[position]); */
-
-            ImageView cell = (ImageView) gridView .findViewById(R.id.gamegrid);
+            @SuppressLint("WrongViewCast") ImageView cell = gridView .findViewById(R.id.gamegrid);
 
             cell.setImageResource(R.mipmap.circle_blue);
 
         } else {
-            gridView = (View) convertView;
+            gridView = convertView;
         }
 
         return gridView;

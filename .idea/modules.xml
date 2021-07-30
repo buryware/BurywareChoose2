@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BurywareChoose.iml" filepath="$PROJECT_DIR$/BurywareChoose.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BurywareChoose2.iml" filepath="$PROJECT_DIR$/BurywareChoose2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BurywareChoose2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BurywareChoose2.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/BurywareChoose2.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/BurywareChoose2.library.iml" />
     </modules>
   </component>
 </project>

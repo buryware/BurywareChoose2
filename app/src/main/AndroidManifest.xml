@@ -1,34 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.buryware.burywarechoose" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.buryware.burywarechoose">
 
-    <application
-        android:allowBackup="true"
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+
+   <application
         android:icon="@drawable/choose_logo"
-        android:label="Choose by Buryware"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:label="Choose 2 by Buryware"
+        android:allowBackup="true">
+
         <activity
             android:name=".ChooseActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ChooserGameActivity"
             android:label="Choose by Buryware"
-            android:parentActivityName=".ChooseActivity" >
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ChooseActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.buryware.burywarechoose.ChooseActivity" />
-        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+                android:value=".ChooseActivity" />
+        </activity>
+
+        <activity
+            android:name=".DonationsActivity"
+            android:label="Donate to Buryware"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".DonationsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:theme="@style/Theme.AppCompat"
+                android:value=".DonationsActivity" />
+        </activity>
+
+        <activity
+            android:name=".ChooseAboutActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="About Buryware" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ChooseAboutActivity" />
+        </activity>
+
+        <activity
+            android:name=".HighAwardsScores"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="High Scores Buryware" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighAwardsScores" />
+        </activity>
+
+        <activity
+            android:name=".TournementActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Buryware Tournement" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TournementActivity" />
+        </activity>
+
+        <activity
+            android:name=".HighestAwardsScores"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Highest CHOOSE Scores" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighestAwardsScores" />
+        </activity>
+
+        <activity
+            android:name=".ChooseThanksFirstUsers"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Laudate Excelsis..." >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ChooseThanksFirstUsers" />
+        </activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

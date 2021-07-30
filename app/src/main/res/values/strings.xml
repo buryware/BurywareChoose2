@@ -1,17 +1,119 @@
 <resources>
-    <string name="app_name">Choose 2</string>
-    <string name="large_text">
-        "Choose© 2.0 by Buryware 2014-19.\n"
-        "\nWritten by Steve Stansbury"
-        "\n\nPick the blue buttons..."
-        "\nSee how far you can CHOOSE!"
-        "\nGreen is a win, red is a lose.\nGet ALL the green, and YOU will advance!"
-        "\n\nHit the RESET button restart a game\nfrom your current level."
-        "\nTo completely start over, use \nStart Over from the menu,\nor rotate your phone.\n\nEnjoy!"
+    <string name="app_name" translatable="false">Choose 2</string>
+    <string name="large_header_text0" translatable="false">
+        "Choose 2.0 by Buryware"
     </string>
-    <string name="action_settings">Start Over</string>
-    <string name="action_win">YOU WIN!</string>
-    <string name="action_lose">Please try again...</string>
-    <string name="action_start">Start a new game...</string>
-    <string name="action_play">Pick a blue tile...</string>
+
+    <string name="large_header_text" translatable="false">
+        "Written by Steve Stansbury\nCopyright © 2015 - 2021.\n\nPick the blue buttons...\nSee how far you can CHOOSE!\n\nGreen is a win, red is a lose.  Get ALL the green, and\nYOU will advance!"
+        "\n\nHit the RESET button restart a game\nfrom your current level."
+        "\n\nTo completely start over, use the\nStart Over from the menu, or\nrotate your device.\n\nEnjoy!"
+    </string>
+
+    <string name="large_header_text2" translatable="false">\n
+        "Choose© 2.0 by Buryware.\nCopyright © 2015 - 2019.\n"
+        "\nWritten by Steve Stansbury"\n</string>
+    <string name="firstusersthankstext" translatable="false">>
+        "
+        I want to personally thank all of you, for your kind and friendly feedback!  Incorporated a night mode, skipped adding sound; added Thank You, Tournement, High Score, and the Top 3 modes.\n\n   Come on in, and take a good long look around in CHOOSE 2.\n\n   Please see my other products, to the right."
+    </string>
+    <string name="action_settings" translatable="false">Start Over</string>
+    <string name="action_level" translatable="false">>Start from Level 1</string>
+    <string name="action_donate" translatable="false">Please Donate</string>
+    <string name="action_win" translatable="false">YOU WIN!</string>
+    <string name="action_lose" translatable="false">Please try again...</string>
+    <string name="action_start" translatable="false">Start a new game...</string>
+    <string name="action_play" translatable="false">Pick a blue tile...</string>
+    <string name="action_invite" translatable="false">Invite fellow players</string>
+    <string name="action_about" translatable="false">About</string>
+    <string name="level_1" translatable="false">Level : 1</string>
+    <string name="reset" translatable="false">Reset</string>
+    <string name="donate_button" translatable="false">donate button</string>
+    <string name="awards_button" translatable="false">awards button</string>
+    <string name="tournament_button" translatable="false">tournament button</string>
+    <string name="thanksfirstusers_button" translatable="false">Thanks First Users!!!</string>
+    <string name="logo" translatable="false">Buryware</string>
+
+    <string-array name="donation_google_catalog_values" translatable="false">
+        <item>1 Euro</item>
+        <item>2 Euros</item>
+        <item>3 Euros</item>
+        <item>5 Euros</item>
+        <item>8 Euros</item>
+        <item>13 Euros</item>
+    </string-array>
+
+    <string name="donation_paypal_item" translatable="false">Donation</string>
+    <string name="title_activity_high_awards_scores" translatable="false">HighAwardsScores</string>
+    <string name="awards" translatable="false">Awards</string>
+    <string name="invite" translatable="false">Invite</string>
+
+    <string name="title_activity_tournement" translatable="false">Tournement</string>
+
+    <string name="google_site_verify" translatable="false">google-site-verification: google4b2dfb9cff96b899.html</string>
+    <string name="MsgUniqueID" translatable="false">38400000-8cf0-11bd-b23e-10b96e4ef00d</string>
+    <string name="TimeStampSeed" translatable="false">yyyy.MM.dd.HH.mm.ss</string>
+    <string name="welcome_msg" translatable="false">Welcome!</string>
+    <string name="sign_out" translatable="false">Sign Out</string>
+    <string name="contacts_permission_rationale" translatable="false">Access to account information is required to sign in.</string>
+    <string name="invite_menu_label" translatable="false">Invite</string>
+    <string name="invitation_message" translatable="false">Please join me for a friendly chat</string>
+    <string name="invitation_cta" translatable="false">Call to action</string>
+    <string name="invitation_title" translatable="false">Friendly Chat Invite</string>
+    <string name="sign_in" translatable="false">Sign In</string>
+    <string name="sign_up" translatable="false">Sign Up</string>
+    <string name="tournamant_button" translatable="false">tournamant button</string>
+    <string name="night_mode_on" translatable="false">Night mode On</string>
+    <string name="night_mode_off" translatable="false">Night mode Off</string>
+    <string name="night_mode_on_off" translatable="false">Night mode On/Off</string>
+    <string name="HS_mode" translatable="false">Show 100 Top High Scores</string>
+    <string name="Highest_mode" translatable="false">Show Hightest 3 Champions</string>
+    <string name="FirstUsersthanks_mode" translatable="false">Thanks First Users!!!</string>
+    <string name="status_line" translatable="false">status_line</string>
+
+    <string name="Playing" translatable="false">Playing...</string>
+    <string name="pot_total" translatable="false">POT TOTAL:</string>
+
+    <string name="RulesHint" translatable="false">  ============      R U L E S    ===========  \n\nWelcome!\n\n1). Please join, if you are serious!!\n\n2). If you miss your game, you can play in the unplayed game pot, designated on the calendar.  See special magenta icon..\n\n3). To join an event, press the Join button.  Next, pick a date on the calendar, that is a selected game event.  Pick your $x amount, radio button next, on the bottom.  The Join button will become an Add button.  Hit the ADD button, and a confirmation will display. Enter the OK button and you are in!  CANCEL button clears all choices..\n\n4). The UPDATE button, allows you to change your ONLY dates, BEFORE it passes.  Your name will be selected.  You can ONLY change your selected date..\n\n5). Hit the CANCEL button, to terminate a Join or an Update..\n\n6). HINTS will display this hints page..\n\nHave FUN and PLAY HARD!"</string>
+
+    <string name="UpdateCalendar" translatable="false">Update Calendar</string>
+
+    <string name="agenda_today" translatable="false">TODAY, %1$s</string>
+    <string name="agenda_yesterday" translatable="false">YESTERDAY, %1$s</string>
+    <string name="agenda_tomorrow" translatable="false">TOMORROW, %1$s</string>
+    <string name="today" translatable="false">Today</string>
+    <string name="tomorrow" translatable="false">Tomorrow</string>
+    <string name="today_at_time_fmt" translatable="false">Today at %s</string>
+    <string name="tomorrow_at_time_fmt" translatable="false">Tomorrow at %s</string>
+    <string name="date_time_fmt" formatted="false" translatable="false">%s, %s</string>
+    <string name="no_title_label" translatable="false">(No title)</string>
+    <string name="event_create" translatable="false">"New event"</string>
+    <string name="day_view_new_event_hint" translatable="false">+ New event</string>
+    <string name="new_event_dialog_label" translatable="false">"New event"</string>
+    <string name="new_event_dialog_option" translatable="false">"New event"</string>
+    <string name="template_announce_item_index" translatable="false">Event</string>
+
+    <string name="players" translatable="false">Players</string>
+    <string name="winners" translatable="false">Winners</string>
+    <string name="topwinners" translatable="false">Top 100 Winners List</string>
+    <string name="top3winners" translatable="false">Top 3 Champions List</string>
+
+    <string name="OK" translatable="false">OK</string>
+    <string name="HINTS" translatable="false">HINTS</string>
+    <string name="UPDATE" translatable="false">UPDATE</string>
+    <string name="CANCEL" translatable="false">CANCEL</string>
+    <string name="JOIN" translatable="false">JOIN</string>
+    <string name="spacers" translatable="false">   </string>
+    <string name="END" translatable="false">END</string>
+    <string name="ADD" translatable="false">ADD</string>
+    <string name="DELETE" translatable="false">DELETE</string>
+
+    <string name="JoinSession" translatable="false">======  JOIN SESSION =======</string>
+    <string name="ErrorJoinSession" translatable="false">* ERROR - JOIN SESSION not been selected. *</string>
+    <string name="ErrorBidAmount" translatable="false">* ERROR - Bid amount (radio button) has not been selected. *</string>
+    <string name="pot_amount_zero_text" translatable="false">$0.00</string>
+    <string name="zero_dollar" translatable="false">$0</string>
+    <string name="author_steve_stansbury" translatable="false">Author_Steve_Stansbury</string>
+
+
 </resources>

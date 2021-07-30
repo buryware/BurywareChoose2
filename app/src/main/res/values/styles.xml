@@ -7,11 +7,48 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextAppearance" parent="android:TextAppearance">
+    </style>
+
+    <style name="TextAppearance.MonthView_MiniDayLabel">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/month_other_month_day_number</item>
+    </style>
+
+    <style name="MonthView_MiniMonthLabel">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:paddingBottom">2dip</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/month_mini_day_number</item>
+    </style>
+
+    <style name="MonthView_DayLabel">
+        <item name="android:layout_width">29dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:paddingBottom">2dip</item>
+        <item name="android:textAppearance">@style/TextAppearance.MonthView_DayLabel</item>
+    </style>
+
+    <style name="TextAppearance.MonthView_DayLabel">
+        <item name="android:textSize">@dimen/day_label_text_size</item>
+        <item name="android:paddingLeft">2dip</item>
+        <item name="android:textColor">@color/month_day_names_color</item>
+    </style>
 
 </resources>
