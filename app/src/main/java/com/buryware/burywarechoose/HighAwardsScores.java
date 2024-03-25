@@ -16,7 +16,7 @@ public class HighAwardsScores extends AppCompatActivity {
     private Button mOkay;
     private static RecyclerView mHighScoreRecyclerView;
     private LinearLayoutManager mHSLayoutManager;
-    private int friendlyMessageCount = 4;
+    private int friendlyMessageCount = 4444;
 
     // test
 
