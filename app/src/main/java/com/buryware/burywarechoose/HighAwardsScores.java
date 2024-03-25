@@ -18,6 +18,8 @@ public class HighAwardsScores extends AppCompatActivity {
     private LinearLayoutManager mHSLayoutManager;
     private int friendlyMessageCount = 0;
 
+    // test
+
     public static final String ANONYMOUS = "anonymous";
 
 }
